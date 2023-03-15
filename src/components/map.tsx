@@ -1,4 +1,5 @@
 export const Map: React.FC = () => {
+    return null;
     return (
         <iframe
             src={process.env.NEXT_PUBLIC_MAPS_URL}

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import { FaLocationArrow } from 'react-icons/fa';
@@ -59,12 +58,7 @@ export const Carousel: React.FC<IProps> = ({ slides }) => {
                 slides?.map((slide, i) => {
                     return (
                         <div key={i} className={clsx(`keen-slider__slide number-slide${i}`)}>
-                            <Image
-                                fill
-                                priority
-                                alt={slide.alt}
-                                src={slide.url}
-                            />
+                            <img alt={slide.alt} src={slide.url} className='w-full h-full' />
                         </div>
                     )
                 })

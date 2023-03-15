@@ -1,8 +1,9 @@
 export const Map: React.FC = () => {
-    return null;
-    return (
+    const mapUrl = import.meta.env.VITE_MAPS_URL;
+
+    return !mapUrl ? null : (
         <iframe
-            src={process.env.NEXT_PUBLIC_MAPS_URL}
+            src={import.meta.env.VITE_MAPS_URL}
             width="100%"
             height="100%"
             style={{ border: 0 }}

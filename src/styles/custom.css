@@ -2,8 +2,42 @@
   width: min(1024px, 90%);
 }
 
-.divider-list>*:not(:last-child) {
+.divider-list > *:not(:last-child) {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #eee;
+}
+
+/*=== BACK TO TOP =======================*/
+
+#whats-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%); /* tirar da tela */
+  transition: 200ms; /* para o botão aparecer suavemente */
+
+  width: 75px;
+  height: 75px;
+  background: #00cf54;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%);
+  border-radius: 999px;
+}
+
+#whats-button.show {
+  /* o botão fica visível quando possuir a classe show */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-0px); /* retornar à posição inicial */
+}
+
+#whats-button:hover {
+  opacity: 0.5;
 }

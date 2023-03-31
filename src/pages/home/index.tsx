@@ -2,22 +2,29 @@ import React from 'react';
 import { Accordion } from '~/components/accordion';
 import { Carousel } from '~/components/carousel';
 import { Header } from '~/components/header';
-import { Marquee } from '~/components/marquee';
 import { Footer } from '~/components/footer';
 import { Map } from '~/components/map';
+import { BannerWithLegend } from '~/components/banner-legend';
+import { WhatsButton } from '~/components/whats-button';
 
 const slides = [
     {
-        url: 'https://previews.123rf.com/images/muchmaniavector/muchmaniavector1803/muchmaniavector180300065/97691841-group-of-dog-breeds-holding-bone-front-view-pet-background-banner.jpg',
-        alt: 'banner'
+        url: '/carousel-1.jpg',
+        alt: 'passando o tempo com o pet',
+        title: 'A saúde do seu pet em primeiro lugar!',
+        description: 'A clínica veterinária ClinSP garante o melhor suporte e atendimento para seu melhor amigo.',
     },
     {
-        url: 'https://previews.123rf.com/images/muchmaniavector/muchmaniavector1803/muchmaniavector180300065/97691841-group-of-dog-breeds-holding-bone-front-view-pet-background-banner.jpg',
-        alt: 'banner'
+        url: '/carousel-2.jpg',
+        alt: 'dois gatos ',
+        title: 'Proporcione os melhores momentos com cuidado e carinho',
+        description: 'Buscamos entregar o melhor atendimento e o mais completo, do inicio ao fim.',
     },
     {
-        url: 'https://previews.123rf.com/images/muchmaniavector/muchmaniavector1803/muchmaniavector180300065/97691841-group-of-dog-breeds-holding-bone-front-view-pet-background-banner.jpg',
-        alt: 'banner'
+        url: '/carousel-3.jpg',
+        alt: 'gato deitado',
+        title: 'Busque a prevenção da saúde do seu pet.',
+        description: 'Nosso objetivo é a prevenção e tratamento de doenças e patologias existentes.',
     }
 ];
 
@@ -29,57 +36,50 @@ export default function Home() {
             </header>
             <main>
                 {slides && (
-                    <section className='relative h-[24rem] lg:h-[48rem] bg-slate-50'>
+                    <section className='relative h-[32rem] md:h-[48rem] bg-slate-50'>
                         <Carousel slides={slides} />
+                        <img src="/carousel-wave.svg" className='w-full absolute top-0' />
                     </section>
                 )}
-                <section id="sobre-nos" className='relative items-center text-center lg:text-left flex flex-col lg:flex-row responsive-width justify-between mx-auto py-16 gap-8 xl:gap-16'>
+                <section id="sobre-nos" className='relative items-center text-center lg:text-left flex flex-col lg:flex-row responsive-width justify-between mx-auto py-24 gap-12 xl:gap-16'>
                     <div className='flex flex-1 flex-col gap-8'>
                         <h2 className='text-4xl xl:text-5xl'>
-                            Sobre <span className='font-semibold text-primary'>a ClinSP</span>
+                            Sobre <span className='font-semibold text-secondary'>a ClinSP</span>
                         </h2>
-                        <div className='flex flex-col gap-3 xl:gap-5'>
-                            <h3 className='text-primary text-lg lg:text-2xl'>
+                        <div className='flex flex-col gap-3 xl:gap-5 text-lg lg:text-xl '>
+                            <h3 className='text-secondary font-semibold'>
                                 Nossa equipe de profissionais está sempre,
                                 buscando o constante aprimoramento de
                                 nossos serviços para melhor atender os
                                 nossos pacientes.
                             </h3>
-                            <h3 className='text-lg lg:text-2xl'>
+                            <h3>
                                 Nosso objetivo é a prevenção das doenças
                                 que podem acometer os pets e também
                                 no tratamento das patologias existentes.
                             </h3>
+                            <h3>
+                                Buscamos entregar o melhor atendimento e o mais
+                                completo, com isso, temos parceiros que atendem
+                                na <span className='font-semibold text-secondary'>Acupuntura, Dermatologia, Oftamologia, Hematologia, Ortopedia, Cardiologia e Silvestres.</span>
+                            </h3>
                         </div>
                     </div>
-                    <div className='flex w-full items-center justify-center sm:w-[24rem] h-[22rem] bg-slate-500 rounded-lg' />
+                    <div className='flex items-center justify-center w-[16rem] h-[16rem] lg:w-[24rem] lg:h-[24rem] rounded-lg'>
+                        <img src="/logotipo.png" className='h-full w-full' />
+                    </div>
                 </section>
-                <div className='px-4 py-8 bg-primary flex flex-col gap-4'>
-                    <h2 className='text-white text-md mx-auto xl:text-2xl'>Entre em contato e agende sua consulta</h2>
-                    <button className='py-1 mx-auto text-lg font-bold px-8 rounded-lg border-4 border-white text-white hover:opacity-50'>
-                        Clicando aqui!
-                    </button>
+                <div className='lg:h-[250px] lg:block'>
+                    <img src="/wave.png" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <section id="especialidades" className='relative flex flex-col items-center justify-center py-12 md:py-16 gap-12 md:gap-16 responsive-width m-auto'>
-                    <h2 className='text-4xl lg:text-5xl'>
-                        Especialidades
-                    </h2>
-                    <ul className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                        {
-                            Array(6).fill(null).map((_, i) => (
-                                <li key={i} className='bg-slate-500 w-72 h-48 rounded-lg' />
-                            ))
-                        }
-                    </ul>
-                </section>
-                <section id='consultas-e-exames' className='relative bg-slate-50'>
-                    <div className='flex flex-col items-center m-auto py-12 md:py-16 gap-12 md:gap-16 responsive-width'>
+                <section id='consultas-e-exames' className='relative'>
+                    <div className='flex flex-col items-center m-auto py-12 md:py-24 gap-12 md:gap-16 responsive-width'>
                         <h2 className='text-4xl lg:text-5xl text-center'>
-                            Consultas <span className='font-semibold text-primary'>e Exames</span>
+                            Consultas <span className='font-semibold text-secondary'>e Exames</span>
                         </h2>
                         <div className='flex flex-col w-full divider-list'>
                             <Accordion defaultValue title='Consultas'>
-                                <p className='text-md lg:text-lg'>
+                                <p className='text-md lg:text-xl'>
                                     Garantia de um ótimo atendimento, feito por{" "}
                                     <span className='text-secondary font-semibold'>
                                         profissionais especializados em cães, gatos e animais silvestres.
@@ -91,61 +91,72 @@ export default function Home() {
                                     </span>
                                 </p>
                             </Accordion>
-                            <Accordion title='Exames' />
-                        </div>
-                        <button className='bg-primary text-lg py-2 px-6 rounded-lg text-white font-bold hover:opacity-50'>
-                            Agende sua Consulta ou Exame
-                        </button>
-                    </div>
-                </section>
-                <section id='coworking' className='relative flex flex-row items-center'>
-                    <div className='flex flex-1 flex-col xl:items-end mx-auto py-12 md:py-16 gap-12 md:gap-16'>
-                        <div className='flex flex-col mx-auto xl:mx-0 gap-12 responsive-width xl:w-[40vw] 2xl:w-[35vw] max-w-[800px] text-center xl:text-left'>
-                            <h2 className='text-4xl lg:text-5xl'>
-                                Co<span className='text-primary font-semibold'>Working</span>
-                            </h2>
-                            <div className='flex flex-col gap-4'>
-                                <p className='text-xl'>
-                                    Sala disponível para locação. Ambiente equipado
-                                    e completo para seu uso diário, além de materiais
-                                    disponíveis para uso interno.
-                                </p>
-                                <p className='text-xl font-bold text-secondary'>
-                                    Alugue um ambiente e faça seus atendimentos!
-                                </p>
-                            </div>
-                            <div className='bg-secondary py-8 px-6 rounded-lg flex flex-col gap-4 w-full md:w-[36rem] xl:w-full mx-auto'>
-                                <input className='w-full rounded-lg p-2 focus:outline-blue-500' placeholder='Nome' />
-                                <input className='w-full rounded-lg p-2 focus:outline-blue-500' placeholder='Número' />
-                                <textarea
-                                    name="mensagem"
-                                    rows={5}
-                                    placeholder='Mensagem'
-                                    className='p-2 rounded-lg focus:outline-blue-500 resize-none'
-                                />
-                            </div>
+                            <Accordion defaultValue title='Exames'>
+                                <div className='text-md lg:text-xl flex flex-col gap-4'>
+                                    <p>
+                                        Fazemos diversos exames, dentre eles temos: exames anátomo-patologico ( sangue,
+                                        urina, fezes); Eletrocardiograma; Citologia e Histopatologia;
+                                    </p>
+                                    <p className='font-semibold text-secondary'>
+                                        Sob agendamento prévio: Ultrassom, RX, Ecocardiograma
+                                    </p>
+                                </div>
+                            </Accordion>
                         </div>
                     </div>
-                    <aside className='relative hidden flex-1 xl:h-[60vw] max-h-[800px] xl:flex'>
-                        <img src="/aside-content.png" />
-                        {/* <Image src="/aside-content.png" fill alt="aside-content" sizes="100vw" priority /> */}
-                    </aside>
                 </section>
-                <section className='relative bg-slate-50'>
-                    <div className='flex flex-col items-center m-auto py-12 md:py-16 gap-12 md:gap-16 responsive-width'>
-                        <h2 className='text-4xl lg:text-5xl'>
+                <section id="especialidades" className='w-full relative flex flex-col py-12 md:py-24 gap-12 md:gap-16 bg-slate-50'>
+                    <h2 className='text-4xl lg:text-5xl text-center font-semibold text-secondary'>
+                        Especialidades
+                    </h2>
+                    <ul className='flex flex-col gap-8 text-xl lg:text-2xl'>
+                        <li>
+                            <BannerWithLegend url="/carousel-4.jpg" title="Odontologia" />
+                        </li>
+                        <li className="responsive-width m-auto">
+                            <h3>
+                                <span className='text-secondary'>Voltada para prevenção</span>{" "}através de profilaxia dentária (retirada de placas, cálculos dentários e
+                                polimento) e também <span className='text-secondary'>Tratamento Periodontal quando já há doença bacteriana,</span>{' '}causando mobilidade
+                                dentária, exposição de raiz, destruição óssea, perda dos ligamentos periodontais e que são casos mais
+                                graves e que podem levar o animal a vários outras patológicas (coração, fígado, rim e outros).
+                            </h3>
+                        </li>
+                        <li>
+                            <BannerWithLegend url="/carousel-5.jpg" title='Medicina de Felinos' />
+                        </li>
+                        <li className="responsive-width m-auto">
+                            <h3>
+                                A ClinSP além de Clinica Geral também <span className='text-secondary'>dispõe de Medicina de Felinos</span>{" "}com consultório exclusivo
+                                para a espécie.
+                            </h3>
+                        </li>
+                        <li className='relative'>
+                            <BannerWithLegend url="/carousel-6.jpg" title='Oncologia' />
+                            <img className='h-[72px] w-[72px] lg:h-[120px] lg:w-[120px] absolute top-8 right-8' src="/oncologia.png" />
+                        </li>
+                        <li className="responsive-width m-auto">
+                            <h3>
+                                <span className='text-secondary'>Voltada para todos os tipos de câncer,</span>{' '}seja através de diagnostico, cirurgia, tratamento
+                                quimioterápico, Criocirurgia e se necessário Eletroquimioterapia.
+                            </h3>
+                        </li>
+                    </ul>
+                </section>
+                <section id='ambientes' className='relative'>
+                    <div className='flex flex-col items-center m-auto py-12 md:py-24 gap-12 md:gap-16 responsive-width'>
+                        <h2 className='text-4xl lg:text-5xl text-secondary font-semibold'>
                             Ambientes
                         </h2>
-                        <div className='h-[22rem] lg:h-[36rem] bg-slate-50 w-full rounded-lg overflow-hidden'>
-                            <Carousel slides={slides} />
-                        </div>
+                    </div>
+                    <div className='relative h-[32rem] md:h-[48rem] bg-slate-50'>
+                        <Carousel slides={slides} />
                     </div>
                 </section>
-                <section className='relative'>
-                    <div className='flex flex-col items-center m-auto py-12 md:py-16 gap-12 md:gap-16 responsive-width'>
+                <section className='relative pb-12 md:pb-24'>
+                    <div className='flex flex-col items-center m-auto py-12 md:py-24 gap-12 md:gap-16 responsive-width'>
                         <div className='flex flex-col items-center gap-4 lg:gap-8'>
                             <h2 className='text-4xl lg:text-5xl'>
-                                Nossos <span className='font-semibold text-primary'>Pacientes</span>
+                                Nossos <span className='font-semibold text-secondary'>Pacientes</span>
                             </h2>
                             <p className='text-lg lg:text-xl'>O que falam sobre nós</p>
                         </div>
@@ -156,16 +167,14 @@ export default function Home() {
                         </ul>
                     </div>
                 </section>
-                <section className="relative py-12">
-                    <Marquee />
-                </section>
-                <section className="relative h-[18rem] lg:h-[36rem]">
+                <section className="relative  h-[24rem] md:h-[48rem] border-t-[1px] border-t-slate-200">
                     <Map />
                 </section>
             </main>
-            <footer className='bg-secondary py-16'>
+            <footer>
                 <Footer />
             </footer>
+            <WhatsButton />
         </>
     );
 };

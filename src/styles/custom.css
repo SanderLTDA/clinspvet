@@ -5,7 +5,7 @@
 .divider-list > *:not(:last-child) {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
 }
 
 /*=== BACK TO TOP =======================*/

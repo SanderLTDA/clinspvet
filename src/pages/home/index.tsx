@@ -36,7 +36,7 @@ export default function Home() {
             </header>
             <main>
                 {slides && (
-                    <section className='relative h-[32rem] md:h-[48rem] bg-slate-50'>
+                    <section className='relative h-[32rem] md:h-[48rem] bg-slate-200'>
                         <Carousel slides={slides} />
                         <img src="/carousel-wave.svg" className='w-full absolute top-0' />
                     </section>
@@ -148,7 +148,7 @@ export default function Home() {
                             Ambientes
                         </h2>
                     </div>
-                    <div className='relative h-[32rem] md:h-[48rem] bg-slate-50'>
+                    <div className='relative h-[32rem] md:h-[48rem] bg-slate-200'>
                         <Carousel slides={slides} />
                     </div>
                 </section>

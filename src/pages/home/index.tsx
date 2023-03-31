@@ -94,7 +94,7 @@ export default function Home() {
                             <Accordion defaultValue title='Exames'>
                                 <div className='text-md lg:text-xl flex flex-col gap-4'>
                                     <p>
-                                        Fazemos diversos exames, dentre eles temos: exames anátomo-patologico ( sangue,
+                                        Fazemos diversos exames, dentre eles temos: exames anátomo-patologico (sangue,
                                         urina, fezes); Eletrocardiograma; Citologia e Histopatologia;
                                     </p>
                                     <p className='font-semibold text-secondary'>
@@ -105,7 +105,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section id="especialidades" className='w-full relative flex flex-col py-12 md:py-24 gap-12 md:gap-16 bg-slate-50'>
+                <section id="especialidades" className='w-full relative flex flex-col py-12 md:py-24 gap-12 md:gap-16 bg-slate-200'>
                     <h2 className='text-4xl lg:text-5xl text-center font-semibold text-secondary'>
                         Especialidades
                     </h2>

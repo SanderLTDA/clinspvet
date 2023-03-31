@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
                     className='text-primary xl:hidden cursor-pointer hover:opacity-50'
                 />
             </div>
-            <ul ref={menuListRef} className='hidden xl:flex flex-col xl:flex-row gap-3 xl:gap-6 mt-4 xl:mt-0 items-center bg-white rounded-lg'>
+            <ul ref={menuListRef} className='hidden xl:flex flex-col xl:flex-row gap-3 xl:gap-6 mt-4 xl:mt-0 items-center rounded-lg'>
                 <a href='#sobre-nos' className='w-full xl:w-auto'>
                     <li className='bg-tertiary xl:bg-transparent text-center text-lg w-full xl:w-auto py-2 px-6 xl:py-0 xl:px-0 rounded-lg text-white xl:text-label font-semibold hover:opacity-50 cursor-pointer'>
                         Sobre nós

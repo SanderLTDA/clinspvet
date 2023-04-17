@@ -65,7 +65,7 @@ export default function Home() {
                             </h3>
                         </div>
                     </div>
-                    <div className='flex items-center justify-center w-[16rem] h-[16rem] lg:w-[24rem] lg:h-[24rem] rounded-lg'>
+                    <div className='flex items-center justify-center w-[14rem] h-[16rem] lg:w-[20rem] lg:h-[24rem] rounded-lg'>
                         <img src="/logotipo.png" className='h-full w-full' />
                     </div>
                 </section>
@@ -150,21 +150,6 @@ export default function Home() {
                     </div>
                     <div className='relative h-[32rem] md:h-[48rem] bg-slate-200'>
                         <Carousel slides={slides} />
-                    </div>
-                </section>
-                <section className='relative pb-12 md:pb-24'>
-                    <div className='flex flex-col items-center m-auto py-12 md:py-24 gap-12 md:gap-16 responsive-width'>
-                        <div className='flex flex-col items-center gap-4 lg:gap-8'>
-                            <h2 className='text-4xl lg:text-5xl'>
-                                Nossos <span className='font-semibold text-secondary'>Pacientes</span>
-                            </h2>
-                            <p className='text-lg lg:text-xl'>O que falam sobre nós</p>
-                        </div>
-                        <ul className='flex flex-col items-center gap-8 lg:gap-12 lg:flex-row'>
-                            <li className='w-64 h-64 border-[12px] border-primary' />
-                            <li className='w-80 h-80 border-[12px] border-primary' />
-                            <li className='w-64 h-64 border-[12px] border-primary' />
-                        </ul>
                     </div>
                 </section>
                 <section className="relative  h-[24rem] md:h-[48rem] border-t-[1px] border-t-slate-200">

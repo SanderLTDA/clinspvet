@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
     return (
         <nav className='flex flex-col xl:flex-row xl:items-center m-auto py-4 justify-between responsive-width'>
             <div className='flex items-center justify-between'>
-                <img src='/logotipo.png' className="h-[64px] w-[64px] lg:h-[120px] lg:w-[120px]" />
+                <img src='/logotipo.png' className="h-[64px] w-[64px] lg:h-[8rem] lg:w-[6rem]" />
                 <MdMenu
                     size={36}
                     onClick={openMenu}

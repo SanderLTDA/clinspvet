@@ -4,7 +4,8 @@ import { MdEmail } from "react-icons/md";
 export const Footer: React.FC = () => {
     return (
         <div className="relative bg-secondary py-16">
-            <div className="absolute h-full w-full opacity-40 top-0">
+            <div className="absolute h-full w-full opacity-[0.55] top-0">
+                <div className="absolute w-full h-full bg-black opacity-30" />
                 <img src="/carousel-1.jpg" className="w-full h-full object-cover z-0" />
             </div>
             <div className='text-white relative gap-16 lg:gap-8 text-center lg:text-left responsive-width items-center flex flex-col lg:flex-row justify-between mx-auto'>

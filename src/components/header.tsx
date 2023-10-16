@@ -13,7 +13,9 @@ export const Header: React.FC = () => {
 	return (
 		<nav className="flex flex-col xl:flex-row xl:items-center m-auto py-4 justify-between responsive-width gap-8">
 			<div className={clsx("flex items-center justify-between")}>
-				<img src="/logo_horizontal.svg" className="h-[3rem]" />
+				<a href="/">
+					<img src="/logo_horizontal.svg" className="h-[3rem]" />
+				</a>
 				<MdMenu size={36} onClick={openMenu} className="text-tertiary xl:hidden cursor-pointer hover:opacity-50" />
 			</div>
 			<ul

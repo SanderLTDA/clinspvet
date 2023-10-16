@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { FaLocationArrow } from "react-icons/fa"
 import { clsx } from "clsx";
+import { useState } from "react";
+import { FaLocationArrow } from "react-icons/fa";
 
 interface IProps {
     title: string;
@@ -8,20 +8,19 @@ interface IProps {
     defaultValue?: boolean;
 };
 
-export const Accordion: React.FC<IProps> = ({ title, children, defaultValue }) => {
+export const Accordion: React.FC<IProps> = ({ title, children, defaultValue = false }) => {
     const [opened, setOpened] = useState(defaultValue ?? !!children);
 
-    // function toggle() {
-    //     if (children) {
-    //         setOpened(!opened);
-    //     };
-    // };
+    function toggle() {
+        if (children) {
+            setOpened(!opened);
+        };
+    };
 
     return (
-        <div className='flex items-start justify-start relative gap-6'>
+        <div className='flex items-start justify-start relative gap-6 hover:opacity-50 hover:cursor-pointer ease-linear transition-all' onClick={toggle}>
             <div
-                //onClick={toggle}
-                className={clsx('translate-y-[6px] hover:opacity-75 cursor-pointer ease-linear transition-all ', clsx(opened ? 'rotate-90' : ""))}
+                className={clsx('translate-y-[6px] ease-linear transition-all', clsx(opened ? 'rotate-90' : ""))}
             >
                 <FaLocationArrow size={24} className={clsx('-rotate-45 text-[#40cebe]')} />
             </div>

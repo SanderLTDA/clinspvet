@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { FaLocationArrow } from "react-icons/fa"
 import { clsx } from "clsx";
+import { useState } from "react";
+import { FaLocationArrow } from "react-icons/fa";
 
 interface IProps {
     title: string;
@@ -8,7 +8,7 @@ interface IProps {
     defaultValue?: boolean;
 };
 
-export const Accordion: React.FC<IProps> = ({ title, children, defaultValue }) => {
+export const Accordion: React.FC<IProps> = ({ title, children, defaultValue = false }) => {
     const [opened, setOpened] = useState(defaultValue ?? !!children);
 
     function toggle() {
@@ -18,15 +18,14 @@ export const Accordion: React.FC<IProps> = ({ title, children, defaultValue }) =
     };
 
     return (
-        <div className='flex items-start justify-start relative gap-4'>
+        <div className='flex items-start justify-start relative gap-6 hover:opacity-50 hover:cursor-pointer ease-linear transition-all' onClick={toggle}>
             <div
-                onClick={toggle}
-                className={clsx('translate-y-1 hover:opacity-75 cursor-pointer ease-linear transition-all hover:rotate-45', clsx(opened ? 'rotate-90' : ""))}
+                className={clsx('translate-y-[6px] ease-linear transition-all', clsx(opened ? 'rotate-90' : ""))}
             >
-                <FaLocationArrow size={24} className={clsx('-rotate-45 text-primary')} />
+                <FaLocationArrow size={24} className={clsx('-rotate-45 text-[#40cebe]')} />
             </div>
             <div className='flex flex-col gap-2'>
-                <h3 className='font-semibold text-xl'>{title}</h3>
+                <h3 className='font-semibold text-2xl'>{title}</h3>
                 {opened && children}
             </div>
         </div>

@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
 				<div className="flex flex-col gap-2">
 					<h2 className="text-xl font-bold">Horários:</h2>
 					<div className="whitespace-nowrap">
-						<h3 className="text-base">Seg à Sex - 9h às 17h</h3>
+						<h3 className="text-base">Seg à Sex - 9h às 17h30</h3>
 						<h3 className="text-base">Sab - 09h às 12h30</h3>
 					</div>
 				</div>
